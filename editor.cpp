@@ -6,7 +6,6 @@
 Editor::Editor(QWidget *parent)
 	: QMainWindow(parent)
 {
-
 	createMenu();
 	createStatusBar();
 	createTextEdit();
@@ -25,6 +24,7 @@ void Editor::createMenu()
 	file->addAction(newfile);
 
 	open = new QAction("Open", this);
+	connect(open, SIGNAL(triggered()), this, SLOT(slotOpen()));
 	file->addAction(open);
 
 	save = new QAction("Save", this);

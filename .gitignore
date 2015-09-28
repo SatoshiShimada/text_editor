@@ -1,0 +1,8 @@
+moc_editor.cpp
+*.o
+*.~
+core
+*.core
+*.swp
+#*#
+*~
