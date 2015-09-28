@@ -19,6 +19,7 @@ void Editor::slotOpen()
 			QMessageBox::information(this, tr("Unable to open file"),
 			file.errorString());
 		} else {
+			textEdit->setPlainText(QString());
 			QString text = QString();
 			while(!file.atEnd()) {
 				QByteArray line = file.readLine();
@@ -42,5 +43,17 @@ void Editor::slotSave()
 			out << textEdit->toPlainText();
 		}
 	}
+}
+
+void Editor::slotCut()
+{
+}
+
+void Editor::slotCopy()
+{
+}
+
+void Editor::slotPaste()
+{
 }
 

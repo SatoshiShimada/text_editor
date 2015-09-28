@@ -20,6 +20,9 @@ class Editor : public QMainWindow
 		void slotNewfile();
 		void slotOpen();
 		void slotSave();
+		void slotCut();
+		void slotCopy();
+		void slotPaste();
 
 	private:
 		void createMenu();
@@ -34,6 +37,10 @@ class Editor : public QMainWindow
 		QAction *open;
 		QAction *save;
 		QAction *quit;
+
+		QAction *cut;
+		QAction *copy;
+		QAction *paste;
 
 		QTextEdit *textEdit;
 

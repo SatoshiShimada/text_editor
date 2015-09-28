@@ -35,6 +35,18 @@ void Editor::createMenu()
 	connect(quit, SIGNAL(triggered()), qApp, SLOT(quit()));
 	file->addAction(quit);
 
+	cut = new QAction("Cut", this);
+	connect(cut, SIGNAL(triggered()), this, SLOT(slotCut()));
+	edit->addAction(cut);
+
+	copy = new QAction("Copy", this);
+	connect(copy, SIGNAL(triggered()), this, SLOT(slotCopy()));
+	edit->addAction(copy);
+
+	paste = new QAction("Paste", this);
+	connect(paste, SIGNAL(triggered()), this, SLOT(slotPaste()));
+	edit->addAction(paste);
+
 }
 
 void Editor::createStatusBar()
