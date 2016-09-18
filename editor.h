@@ -31,6 +31,7 @@ class Editor : public QMainWindow
 
 		QMenu *file;
 		QMenu *edit;
+		QMenu *tool;
 		QMenu *help;
 
 		QAction *newfile;
@@ -41,6 +42,8 @@ class Editor : public QMainWindow
 		QAction *cut;
 		QAction *copy;
 		QAction *paste;
+
+		QAction *expandtab;
 
 		QTextEdit *textEdit;
 

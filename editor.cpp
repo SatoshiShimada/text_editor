@@ -17,6 +17,7 @@ void Editor::createMenu()
 {
 	file = menuBar()->addMenu("File");
 	edit = menuBar()->addMenu("Edit");
+	tool = menuBar()->addMenu("Tool");
 	help = menuBar()->addMenu("Help");
 
 	newfile = new QAction("New", this);
@@ -47,6 +48,8 @@ void Editor::createMenu()
 	connect(paste, SIGNAL(triggered()), this, SLOT(slotPaste()));
 	edit->addAction(paste);
 
+	expandtab = new QAction("Expand tab", this);
+	tool->addAction(expandtab);
 }
 
 void Editor::createStatusBar()
